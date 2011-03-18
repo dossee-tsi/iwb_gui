@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://192.168.199.36:8000/WS/LoginService?wsdl" uri="wsdl/85.254.209.136_4081/WS/LoginService.wsdl"/>
+    <system systemId="http://192.168.199.36:8000/WS/LoginService?xsd=1" uri="wsdl/85.254.209.136_4081/WS/LoginService.xsd_1.xsd"/>
+    <system systemId="http://192.168.199.36:8000/WS/SessionsService?wsdl" uri="wsdl/85.254.209.136_4081/WS/SessionsService.wsdl"/>
+    <system systemId="http://192.168.199.36:8000/WS/SessionsService?xsd=1" uri="wsdl/85.254.209.136_4081/WS/SessionsService.xsd_1.xsd"/>
+</catalog>

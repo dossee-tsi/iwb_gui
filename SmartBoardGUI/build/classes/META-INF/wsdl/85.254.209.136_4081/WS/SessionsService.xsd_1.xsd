@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.1-hudson-28-. --><xs:schema xmlns:tns="http://sessions/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://sessions/">
+
+<xs:element name="addCapturedImageComment" type="tns:addCapturedImageComment" />
+
+<xs:element name="addCapturedImageCommentResponse" type="tns:addCapturedImageCommentResponse" />
+
+<xs:element name="addKeyFrameComment" type="tns:addKeyFrameComment" />
+
+<xs:element name="addKeyFrameCommentResponse" type="tns:addKeyFrameCommentResponse" />
+
+<xs:element name="deleteCapturedImage" type="tns:deleteCapturedImage" />
+
+<xs:element name="deleteCapturedImageResponse" type="tns:deleteCapturedImageResponse" />
+
+<xs:element name="deleteKeyFrame" type="tns:deleteKeyFrame" />
+
+<xs:element name="deleteKeyFrameResponse" type="tns:deleteKeyFrameResponse" />
+
+<xs:element name="getCapturedImages" type="tns:getCapturedImages" />
+
+<xs:element name="getCapturedImagesResponse" type="tns:getCapturedImagesResponse" />
+
+<xs:element name="getFriendsSessions" type="tns:getFriendsSessions" />
+
+<xs:element name="getFriendsSessionsResponse" type="tns:getFriendsSessionsResponse" />
+
+<xs:element name="getKeyFrames" type="tns:getKeyFrames" />
+
+<xs:element name="getKeyFramesResponse" type="tns:getKeyFramesResponse" />
+
+<xs:element name="getOtherSessions" type="tns:getOtherSessions" />
+
+<xs:element name="getOtherSessionsResponse" type="tns:getOtherSessionsResponse" />
+
+<xs:element name="getSessions" type="tns:getSessions" />
+
+<xs:element name="getSessionsResponse" type="tns:getSessionsResponse" />
+
+<xs:element name="newCapturedImage" type="tns:newCapturedImage" />
+
+<xs:element name="newCapturedImageResponse" type="tns:newCapturedImageResponse" />
+
+<xs:element name="newKeyFrame" type="tns:newKeyFrame" />
+
+<xs:element name="newKeyFrameResponse" type="tns:newKeyFrameResponse" />
+
+<xs:element name="newSession" type="tns:newSession" />
+
+<xs:element name="newSessionResponse" type="tns:newSessionResponse" />
+
+<xs:complexType name="newSession">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="user_id" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="newSessionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addKeyFrameComment">
+<xs:sequence>
+<xs:element name="kf_id" type="xs:string" minOccurs="0" />
+<xs:element name="comment" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addKeyFrameCommentResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="newKeyFrame">
+<xs:sequence>
+<xs:element name="session_id" type="xs:string" minOccurs="0" />
+<xs:element name="comment" type="xs:string" minOccurs="0" />
+<xs:element name="base64" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="newKeyFrameResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getKeyFrames">
+<xs:sequence>
+<xs:element name="session_id" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getKeyFramesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSessions">
+<xs:sequence>
+<xs:element name="user_id" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSessionsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteCapturedImage">
+<xs:sequence>
+<xs:element name="ci_id" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteCapturedImageResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getFriendsSessions">
+<xs:sequence>
+<xs:element name="user_id" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getFriendsSessionsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCapturedImageComment">
+<xs:sequence>
+<xs:element name="ci_id" type="xs:string" minOccurs="0" />
+<xs:element name="comment" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCapturedImageCommentResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="deleteKeyFrame">
+<xs:sequence>
+<xs:element name="kf_id" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteKeyFrameResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCapturedImages">
+<xs:sequence>
+<xs:element name="key_frame_id" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCapturedImagesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="newCapturedImage">
+<xs:sequence>
+<xs:element name="kf_id" type="xs:string" minOccurs="0" />
+<xs:element name="base64" type="xs:string" minOccurs="0" />
+<xs:element name="comment" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="newCapturedImageResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getOtherSessions">
+<xs:sequence>
+<xs:element name="user_id" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getOtherSessionsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
